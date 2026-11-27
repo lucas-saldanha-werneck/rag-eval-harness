@@ -1,0 +1,34 @@
+{
+  "_note": "EXAMPLE DATA, invented for this demo. Not from any real company or client.",
+  "corpus": {
+    "d1": "To reset your password open Settings, choose Security and press Reset password. A link is sent by email.",
+    "d2": "Invoices are generated on the first day of each month and can be downloaded as PDF from the Billing page.",
+    "d3": "You can cancel your subscription at any time from Billing. Access continues until the end of the paid period.",
+    "d4": "Two-factor authentication uses an authenticator app. Backup codes are shown once when you enable it.",
+    "d5": "Data export produces a CSV file of all records. Large exports are emailed as a download link.",
+    "d6": "API tokens are created under Developer settings. Tokens can be revoked at any time and expire after 90 days.",
+    "d7": "Support is available on weekdays from 9 to 18 in the Brazil time zone. Urgent incidents are handled on weekends.",
+    "d8": "Team members are invited by email. Roles are admin, editor and viewer.",
+    "d9": "Webhooks send a signed JSON request when a record changes. Failed deliveries are retried three times.",
+    "d10": "Deleting your account removes personal data within 30 days. Backups are purged after 60 days."
+  },
+  "golden": [
+    {"id": "q1", "question": "How do I reset my password?", "relevant": ["d1"]},
+    {"id": "q2", "question": "Where can I download my invoice?", "relevant": ["d2"]},
+    {"id": "q3", "question": "How do I stop paying for the plan?", "relevant": ["d3"]},
+    {"id": "q4", "question": "I lost my phone, how do I log in with the second factor?", "relevant": ["d4"]},
+    {"id": "q5", "question": "Can I get all my data out as a spreadsheet?", "relevant": ["d5"]},
+    {"id": "q6", "question": "How long does an API key last?", "relevant": ["d6"]},
+    {"id": "q7", "question": "When is the help desk open?", "relevant": ["d7"]},
+    {"id": "q8", "question": "How do I add a colleague to my workspace?", "relevant": ["d8"]},
+    {"id": "q9", "question": "What happens if my webhook endpoint is down?", "relevant": ["d9"]},
+    {"id": "q10", "question": "How do I erase my account?", "relevant": ["d10"]}
+  ],
+  "synonyms": {
+    "stop": ["cancel"], "paying": ["subscription", "billing"], "plan": ["subscription"],
+    "phone": ["authenticator"], "factor": ["two-factor", "authentication"],
+    "spreadsheet": ["csv"], "key": ["token"], "help": ["support"], "desk": ["support"],
+    "colleague": ["team", "members", "invited"], "workspace": ["team"],
+    "erase": ["deleting", "removes"], "endpoint": ["deliveries"], "down": ["failed"]
+  }
+}
